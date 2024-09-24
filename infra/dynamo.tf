@@ -6,7 +6,7 @@ resource "aws_dynamodb_table" "products" {
 
     hash_key = "productId"
     attribute {
-    name = "productIdId"
+    name = "productId"
     type = "S"  # String data type
     }
 
