@@ -5,9 +5,15 @@ resource "aws_dynamodb_table" "products" {
     write_capacity = 5
 
     hash_key = "productId"
+
     attribute {
-    name = "productId"
-    type = "S"  # String data type
+        name = "productId"
+        type = "S"  # String data type
+    }
+
+    attribute {
+        name = "productName"
+        type = "S"  # String data type
     }
 
     lifecycle {
