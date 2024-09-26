@@ -5,7 +5,7 @@ resource "aws_dynamodb_table" "products" {
     write_capacity = 5
 
     hash_key = "productId"
-    range_key = "productName"
+    range_key = "productNames"
 
     attribute {
         name = "productId"
@@ -13,12 +13,8 @@ resource "aws_dynamodb_table" "products" {
     }
 
     attribute {
-        name = "productName"
+        name = "productNames"
         type = "S"
-    }
-
-    lifecycle {
-        prevent_destroy = true
     }
 
     tags = {
